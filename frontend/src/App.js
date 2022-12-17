@@ -1,15 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Page1 from './pages/Page1';
-import Page2 from './pages/Page2';
+import Homepage from './pages/Homepage';
+import Userdetails from './pages/Userdetails';
 
 function App() {
   return (
     <div className="App">
      <Routes>
-      <Route path="/" element={<Page1/>}></Route>
-      <Route path="/userdetails" element={<Page2/>}></Route>
+      <Route path="/" element={<Homepage/>}></Route>
+      <Route path="/userdetails" element={<Userdetails/>}></Route>
       </Routes> 
     </div>
   );

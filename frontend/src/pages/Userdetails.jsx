@@ -18,7 +18,7 @@ import {
     Avatar
   } from '@chakra-ui/react'
   
-const Page2 = () => {
+const Userdetails = () => {
     let [searchparams,setsearchparams]=useSearchParams()
 let [gender,setgender]=useState(searchparams.getAll("gender")[0]||"")
 let [age,setage]=useState(searchparams.getAll("age")[0]||"")
@@ -123,4 +123,4 @@ setage(e.target.value)
   )
 }
 
-export default Page2
+export default Userdetails

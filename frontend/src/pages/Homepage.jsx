@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { fetchdata,deletedata } from '../redux/action'
 import {Button,VStack,Heading} from "@chakra-ui/react"
 import { useToast } from '@chakra-ui/react'
-const Page1 = () => {
+const Homepage = () => {
     let dispatch=useDispatch()
     let navigate=useNavigate()
     let {loading,delete_error,success,user_error}=useSelector(state=>state)
@@ -42,7 +42,7 @@ navigate("/userdetails")
     let url="https://randomuser.me/api/?results=100"
   return (
     <div>
-        <VStack border="1px solid black" bg="black" height="80px" spacing={"20px"}> <Heading mt="15px" color="white">Developers Page</Heading></VStack>
+        <VStack border="1px solid black" bg="black" height="80px" spacing={"20px"}> <Heading mt="15px" color="white">Home Page</Heading></VStack>
         
     <VStack mt="100px" spacing={"50px"}>
        
@@ -54,4 +54,4 @@ navigate("/userdetails")
   )
 }
 
-export default Page1
+export default Homepage

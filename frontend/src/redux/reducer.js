@@ -38,7 +38,7 @@ switch(type){
             return {...state,user_loading:false,user_success:true,user_error:false, userdata:results,totalpages:(totalcount/10)}
         }
         case (type=types.Get_User_Details_Error):{
-            return {...state,user_loading:false,user_success:false,user_error:true,userdata:[]}
+            return {...state,user_loading:false,user_success:false,user_error:true,userdata:[],totalpages:0}
         }
     default:
     return state
