@@ -1,0 +1,11 @@
+export let Fetch_User_Details_loading="Fetch_User_Details_loading"
+export let Fetch_User_Details_Success="Fetch_User_Details_Success"
+export let Fetch_User_Details_Error="Fetch_User_Details_Error"
+
+export let Delete_User_Details_Loading="Delete_User_Details_Loading"
+export let Delete_User_Details_Success="Delete_User_Details_Success"
+export let Delete_User_Details_Error="Delete_User_Details_Error"
+
+export let Get_User_Details_Loading="Get_User_Details_Loading"
+export let  Get_User_Details_Success="Get_User_Details_Success"
+export let Get_User_Details_Error="Get_User_Details_Error"
