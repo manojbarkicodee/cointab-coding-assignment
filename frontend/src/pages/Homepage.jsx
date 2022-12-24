@@ -11,8 +11,8 @@ const Homepage = () => {
     console.log(loading)
     const toast = useToast()
 
-    let savetodatabase=async()=>{
-        await dispatch(fetchdata(url))
+    let savetodatabase=()=>{
+         dispatch(fetchdata(url))
         if(loading){
             alert("Alert:fetching data in progress")
         }

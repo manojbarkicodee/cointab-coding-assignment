@@ -54,8 +54,9 @@ setage(e.target.value)
 setpage(1)
 }
   return (
-    <div>
-        <VStack border="1px solid black" mb="30px" bg="black" height="80px" spacing={"20px"}> <Heading mt="15px" color="white">User Details Page</Heading></VStack>
+    <div style={{marginBottom:"30px"}}>
+        <VStack border="1px solid black" w={"100%"} mb="30px" bg="black" height="80px" spacing={"20px"}> <Heading mt="15px" color="white">User Details Page</Heading></VStack>
+        
 {
     user_loading?<Spinner/>:
 
@@ -112,7 +113,7 @@ setpage(1)
 </TableContainer>
    
 </div>
-        <HStack spacing="20px">
+        <HStack spacing="20px" width={"43%"} margin={"auto"} overflowX={"scroll"}>
             
             {
               buttons.map((el)=>{

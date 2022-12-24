@@ -12,8 +12,8 @@ console.log(res)
 }).catch((err)=>dispatch({type:types.Fetch_User_Details_Error}))
 }
 
-let deletedata=()=>dispatch=>{
-    dispatch({type:types.Delete_User_Details_Loading})
+let deletedata=()=>async(dispatch)=>{
+   await dispatch({type:types.Delete_User_Details_Loading})
 axios.delete("https://new-server-rc7s.onrender.com/deleteall").then((res)=>{dispatch({type:types.Delete_User_Details_Success})
 console.log(res)
 }).catch((err)=>{dispatch({type:types.Delete_User_Details_Error}
