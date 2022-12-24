@@ -25,11 +25,9 @@ let [age,setage]=useState(searchparams.getAll("age")[0]||"")
 let [page,setpage]=useState(searchparams.getAll("page")[0]|| 1)
 let dispatch=useDispatch()
 let {userdata,totalpages,user_loading,user_error}=useSelector(state=>state)
-console.log(totalpages,userdata)
 
 let buttons=new Array(totalpages).fill(0).map((el,i)=>i+1)
 
-console.log(buttons)
 useEffect(() => {
   setsearchparams({gender:gender,age:age,page:page})
   let params={
@@ -54,7 +52,7 @@ setage(e.target.value)
 setpage(1)
 }
   return (
-    <div style={{marginBottom:"30px"}}>
+    <div style={{marginBottom:"30px",width:"100%"}}>
         <VStack border="1px solid black" w={"100%"} mb="30px" bg="black" height="80px" spacing={"20px"}> <Heading mt="15px" color="white">User Details Page</Heading></VStack>
         
 {

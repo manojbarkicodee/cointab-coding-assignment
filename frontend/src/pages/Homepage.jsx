@@ -8,7 +8,6 @@ const Homepage = () => {
     let dispatch=useDispatch()
     let navigate=useNavigate()
     let {loading,delete_error,success,user_error,userdata}=useSelector(state=>state)
-    console.log(loading)
     const toast = useToast()
 
     let savetodatabase=()=>{
