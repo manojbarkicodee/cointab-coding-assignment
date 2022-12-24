@@ -9,11 +9,11 @@ import {
     Table,
     Thead,
     Tbody,
-    Tfoot,
+  
     Tr,
     Th,
     Td,
-    TableCaption,
+   
     TableContainer,
     Avatar
   } from '@chakra-ui/react'
@@ -46,10 +46,12 @@ dispatch(getdata(page,params))
 
 let handlechange=(e)=>{
 setgender(e.target.value)
+setpage(1)
 }
 console.log(gender)
 let handlechangeage=(e)=>{
 setage(e.target.value)
+setpage(1)
 }
   return (
     <div>
@@ -69,8 +71,9 @@ setage(e.target.value)
         <Select placeholder='Filter By Age' variant='outline'   size='lg' onChange={handlechangeage} name="" id="">
 
             <option value="">All</option>
-            <option value="18-25">18 to 20</option>
+            <option value="18-25">18 to 25</option>
             <option value="25-50">25 to 50</option>
+            <option value="50-80">50 to 80</option>
         </Select>
         </HStack>
 <div>
@@ -92,7 +95,7 @@ setage(e.target.value)
      
       {
         userdata.map((el)=>{
-            return  <Tr>
+            return  <Tr key={el._id}>
             <Td><Avatar size='md' name='Dan Abrahmov' src={el.picture.thumbnail} /></Td>
             <Td>{el.gender}</Td>
             <Td>{el.email}</Td>

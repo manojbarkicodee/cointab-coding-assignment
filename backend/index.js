@@ -58,10 +58,13 @@ console.log(age,gender)
     // console.log(data)
     if(age&&gender){
         data= await usermodel.find({gender:gender,"dob.age":{$gt:filterage[0],$lt:filterage[1]}}).limit(limit).skip((page-1)*limit)
+        totalcount= await usermodel.find({gender:gender,"dob.age":{$gt:filterage[0],$lt:filterage[1]}}).count()
     }else if(age){
         data=await usermodel.find({"dob.age":{$gt:filterage[0],$lt:filterage[1]}}).limit(limit).skip((page-1)*limit)
+        totalcount=await usermodel.find({"dob.age":{$gt:filterage[0],$lt:filterage[1]}}).count()
     }else if(gender){
         data=await usermodel.find({gender:gender}).limit(limit).skip((page-1)*limit)
+        totalcount=await usermodel.find({gender:gender}).count()
     }
     
     console.log(data)

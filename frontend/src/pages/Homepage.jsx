@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { fetchdata,deletedata } from '../redux/action'
@@ -7,7 +7,7 @@ import { useToast } from '@chakra-ui/react'
 const Homepage = () => {
     let dispatch=useDispatch()
     let navigate=useNavigate()
-    let {loading,delete_error,success,user_error}=useSelector(state=>state)
+    let {loading,delete_error,success,user_error,userdata}=useSelector(state=>state)
     console.log(loading)
     const toast = useToast()
 
@@ -23,7 +23,7 @@ const Homepage = () => {
                 description: "We've fetched data from api.",
                
                 status: 'success',
-                duration: 3000,
+                duration: 1000,
                 isClosable: true,
               })
         }
